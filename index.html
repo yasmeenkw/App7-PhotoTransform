@@ -102,7 +102,11 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          
+ function draw_yasmeen() { // this line is to draw the canvas (named yasmeen)
+	 var yasmeen_canvas = document.getElementById("yasmeen");
+  var yasmeen_context = yasmeen_canvas.getContext("2d");
+  yasmeen_context.fillRect(50, 25, 150, 100); // draws the rectangle and fills it in onto the canvas
+ }
           
           
         } // end of img.onload
