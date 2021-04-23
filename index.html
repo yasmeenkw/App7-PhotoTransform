@@ -109,7 +109,7 @@
          context.fillStyle = "black";
          context.fillText("Blue image will go here", 10, 20);
  }
-       //  drawImageIOSFix(yasmeen_context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+         drawImageIOSFix(yasmeen_context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
          //	var img = new Image();
          //	img.onload = function() {
 	//	var imageData = yasmeen_context.getImageData(0, 0, 600, 500);
@@ -120,7 +120,7 @@
        // 	var green = data[i+1]*=0;
        //   var blue = data[i + 2];
         //  var alpha = data[i + 3];
-        }
+        //}
 
         // pick out p
         } // end of img.onload
@@ -128,12 +128,13 @@
         img.src = reader.result;
       } //  end of reader.onload
       
-      reader.readAsDataURL(file);
+       reader.readAsDataURL(file);
     } // end of the if statement checking that file is an image
-
+    else
     {
       // this is what happens if the orignial file selected is not an image file
-         elsemessageDisplayArea.innerHTML = "File not supported!"
+      // this is what happens if the orignial file selected is not an image file
+         messageDisplayArea.innerHTML = "File not supported!"
     } // end of the else statement if file in NOT an image
   }; // end of the fileInput.addEventListener function
  } // end of the window.onload function
