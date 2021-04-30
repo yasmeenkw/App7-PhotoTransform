@@ -119,7 +119,10 @@
          var alpha = data[i + 3];
 	 }
 	 context.putImageData(imageData, 600, 500);
-	 
+	  }
+  	 var img = new Image();
+          img.onload = function() {
+ 		drawImage(img);	 
  }
          
          //	var img = new Image();
