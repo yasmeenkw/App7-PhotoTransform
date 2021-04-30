@@ -27,7 +27,7 @@
  To load a picture onto canvas one and then upload a transformed picture onto canvas two.
  
   Known Issues:
-  none.
+I think because it says there's a syntax error with the "else" function nothing is working as of now, and I worked with two mentors who couldn't figure out why either.
 -->
 
  <head>
@@ -107,9 +107,9 @@
  	 var yasmeen_context = yasmeen_canvas.getContext("2d");
  	 context.font = '20pt Calibri';
          context.fillStyle = "black";
-         context.fillText("Blue image will go here", 10, 20);
+         context.fillText("Blue image will go here", 10, 20); // this and the two lines above it are the identifying text for canvas 2
 	 context.drawImage(img)
-	 var imageData = yasmeen_context.getImageData(0, 0, 600, 500);
+	 var imageData = yasmeen_context.getImageData(0, 0, 600, 500); // this line gets the data about the image's pixel colors
          var data = imageData.data;
 	 //iterate over all pixels
     	for(var i = 0; i< data.length; i += 4) {	
@@ -126,7 +126,7 @@
 
 	 yasmeen_context.putImageData(imageData, 0, 0);
 	 
-  
+  // i commented this section (lines 130-140) out because a mentor worked with me to make this and turn the image blue, however it caused none of the code to work so I commented it out and started new.
          //	var img = new Image();
          //	img.onload = function() {
 	//	var imageData = yasmeen_context.getImageData(0, 0, 600, 500);
@@ -149,7 +149,6 @@
       } // end of the if statement checking that file is an image
     else
     {
-      // this is what happens if the orignial file selected is not an image file
       // this is what happens if the orignial file selected is not an image file
          messageDisplayArea.innerHTML = "File not supported!"
     } // end of the else statement if file in NOT an image
@@ -179,7 +178,7 @@
         context.fillText("Original image will go here", 10, 20);
       </script>
 	<canvas id="yasmeen" width="600" height="600" style="border:1px solid #000000;"></canvas> 
-	 <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+	 <script> /* This script initiates the cavas and puts the text on the canvas "yasmeen_canvas" */
         var canvas = document.getElementById('yasmeen');
         var yasmeen_context = canvas.getContext("2d");
         yasmeen_context.font = '20pt Calibri';
